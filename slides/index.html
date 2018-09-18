@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Expo VIS</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/jofre.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides" data-background-color="#fff">
+			<section>
+				<h1>Visual Analytics</h1>
+				<p>
+					<b>Elementos de juicio para representar los datos</b>
+				</p>
+				<p>CCU 2018 - Planeta ESRI</p>
+				<p>
+					<a href="https://github.com/JofreManchola" target="_blank">Jofre Manchola</a>
+				</p>
+				<a href="https://github.com/JofreManchola" target="_blank" class="github">@JofreManchola</a>
+				<a href="https://twitter.com/jofremanchola" target="_blank" class="twitter">@JofreManchola</a>
+				<hr>
+
+				<footer class="footer">Basado en el<a href="http://johnguerra.co/classes/visual_analytics_fall_2018/" target="_blank">
+						curso de VA</a> de <a href="https://twitter.com/duto_guerra?lang=es" target="_blank">John A Guerra Gómez</a>
+				</footer>
+			</section>
+			<section>
+				<section data-markdown>
+					# Motivación
+				</section>
+				<section>
+					<h3> ¿Cuál visualización es mejor?</h3>
+					<iframe src="../examples/vega-lite/vega_lite.html" frameborder="0" width="784px" height="227px"></iframe>
+					<div>
+						<img src="../assets/votantes_por_depto_mapa.png" alt="mapa" style="width: 200px; border: none;">
+						<img src="../assets/votantes_por_depto_3d.png" alt="mapa" style="width: 500px; border: none;">
+					</div>
+
+				</section>
+				<section>
+					<h3>Interrogantes</h3>
+					<p class="fragment fade-in">¿De qué depende?</p>
+					<p class="fragment fade-in">¿Cómo evaluarlo?</p>
+					<p class="fragment fade-in">¿Existe un marco de referencia?</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Definiciones</h3>
+				</section>
+				<section>
+					<p>Los <span class="fragment highlight-current-blue">sistemas de visualización basados en
+							computador</span> proporcionan representaciones visuales de <span class="fragment highlight-blue"><b>conjuntos
+								de datos</b></span> diseñados para ayudar a las <span class="fragment highlight-blue"><b>personas</b></span> a
+						realizar <span class="fragment highlight-blue"><b>tareas</b></span> de manera más efectiva.
+					</p>
+				</section>
+				<section>
+					<h3>Insight</h3>
+					<ul>
+						<li>Entendimiento produndo</li>
+						<li>Significativo</li>
+						<li>No obvio</li>
+						<li>Accionable</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Marco de referencia</h3>
+					<p> <b>3 grandes ejes</b></p>
+					<ul>
+						<li class="fragment fade-in">Datos | Usuarios | Tareas</li>
+						<li class="fragment fade-in">Marcas | canales</li>
+						<li class="fragment fade-in">Vista general | zoom y filtrado | detalles
+							<footer class="footer"> <a href="http://www.ifp.illinois.edu/nabhcs/abstracts/shneiderman.html">Influential
+									mantra from Shneiderman</a></footer>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Datos - Atributos</h3>
+					<div>
+						<img src="../assets/attribute_types.png" alt="attribute types">
+					</div>
+				</section>
+				<section>
+					<h3>Marcas y canales</h3>
+					<div>
+						<img src="../assets/marks_channels.png" alt="attribute types">
+					</div>
+				</section>
+				<section>
+					<h3>Atributos, Marcas y canales</h3>
+					<iframe src="../examples/vega-lite/vega_lite.html" frameborder="0" width="784px" height="227px"></iframe>
+					<div>
+						<img src="../assets/votantes_por_depto_mapa.png" alt="mapa" style="width: 200px; border: none;">
+						<img src="../assets/votantes_por_depto_3d.png" alt="mapa" style="width: 500px; border: none;">
+					</div>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Modismos</h3>
+				</section>
+				<section>
+					<h3>Barchart</h3>
+					<div>
+						<img src="../assets/animated_barchart.gif" alt="Barchart" width="70%">
+					</div>
+					<footer class="footer"><a href="https://bl.ocks.org/guilhermesimoes/8913c15adf7dd2cab53a" target="_blank">https://bl.ocks.org/guilhermesimoes/8913c15adf7dd2cab53a</a>
+					</footer>
+				</section>
+				<section>
+					<h3>Heatmap</h3>
+					<div>
+						<img src="../assets/animated_heatmap.gif" alt="Barchart" width="70%">
+					</div>
+					<footer class="footer"><a href="../examples/heatmap/index.html" target="_blank">../examples/heatmap/index.html</a>
+					</footer>
+				</section>
+				<section>
+					<h3>Sunburst</h3>
+					<div>
+						<img src="../assets/Sunburst.gif" alt="Sunburst" width="70%">
+					</div>
+					<footer class="footer"><a href="" target="_blank">Sunburst</a>
+					</footer>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Web AppBuilder for ArcGIS</h3>
+					<iframe src="../Segunda_vuelta_presidencial/"
+					 frameborder="0" width="800px" height="500px"></iframe>
+				</section>
+			</section>
+			<section>
+				<h1>Visual Analytics</h1>
+				<p>
+					<b>Elementos de juicio para representar los datos</b>
+				</p>
+				<p>CCU 2018 - Planeta ESRI</p>
+				<p>
+					<a href="https://github.com/JofreManchola" target="_blank">Jofre Manchola</a>
+				</p>
+				<a href="https://github.com/JofreManchola" target="_blank" class="github">@JofreManchola</a>
+				<a href="https://twitter.com/jofremanchola" target="_blank" class="twitter">@JofreManchola</a>
+				<hr>
+
+				<footer class="footer">Basado en el<a href="http://johnguerra.co/classes/visual_analytics_fall_2018/" target="_blank">
+						curso de VA</a> de <a href="https://twitter.com/duto_guerra?lang=es" target="_blank">John A Guerra Gómez</a>
+				</footer>
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			],
+			history: true,
+			showNotes: true,
+			hideAddressBar: false,
+			transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+		});
+	</script>
+</body>
+
+</html>
